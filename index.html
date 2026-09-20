@@ -3,17 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A2 Store</title>
+    <title>متجر A2 Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <h1>A2 Store</h1>
+        <h1>متجر A2 Store</h1>
+        <div class="cart-icon" id="cart-btn">
+            🛒 السلة (<span id="cart-count">0</span>)
+        </div>
     </header>
-    <main>
-        <p>مرحباً بك في متجر A2 Store - قيد التطوير</p>
-        <button id="btn">اضغط هنا</button>
+
+    <main class="container">
+        <h2>المنتجات المتاحة</h2>
+        <div class="products-grid" id="products-container">
+            <!-- سيتم تحميل المنتجات هنا عبر JavaScript -->
+        </div>
     </main>
+
+    <!-- نافذة سلة الشراء -->
+    <div class="modal" id="cart-modal">
+        <div class="modal-content">
+            <span class="close-btn" id="close-cart">&times;</span>
+            <h2>سلة التسوق</h2>
+            <div id="cart-items"></div>
+            <div class="cart-total">
+                <strong>الإجمالي: </strong><span id="total-price">0</span> $
+            </div>
+            <button class="checkout-btn" id="checkout-btn">إتمام الطلب عبر تيليجرام</button>
+        </div>
+    </div>
+
     <script src="app.js"></script>
 </body>
 </html>
